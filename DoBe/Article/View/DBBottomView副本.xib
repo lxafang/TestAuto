@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DBBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpt-po-dYr">
+                    <rect key="frame" x="135" y="8" width="33" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="4mV-S2-JqI"/>
+                        <constraint firstAttribute="width" constant="33" id="vU2-NJ-Duf"/>
+                    </constraints>
+                    <state key="normal" image="icon_comment@3x.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="lookCommentsTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="I76-ME-hfV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ku-RU-3nX">
+                    <rect key="frame" x="196" y="8" width="33" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="JHD-cx-R2U"/>
+                        <constraint firstAttribute="width" constant="33" id="aZl-AS-4T4"/>
+                    </constraints>
+                    <state key="normal" image="icon_collect@3x.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="collectTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="RFv-nb-umW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYD-N1-PGd">
+                    <rect key="frame" x="254" y="8" width="33" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="7S3-jj-X7H"/>
+                        <constraint firstAttribute="width" constant="33" id="V4S-0e-Qmb"/>
+                    </constraints>
+                    <state key="normal" image="icon_share@3x.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="shareTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="P3i-GW-7AF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlc-hN-RSJ">
+                    <rect key="frame" x="315" y="8" width="33" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="33" id="ALf-D4-pTN"/>
+                        <constraint firstAttribute="height" constant="33" id="FeU-DK-UwF"/>
+                    </constraints>
+                    <state key="normal" image="icon_more@3x.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="moreEventTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="vGg-ly-rMB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYn-8T-UgM">
+                    <rect key="frame" x="27" y="8" width="80" height="33"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="  写评论" image="icon_comment_ pen.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="commentTouchUpInside:" destination="iN0-l3-epB" eventType="touchUpInside" id="GKk-Pz-Fpp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sYn-8T-UgM" secondAttribute="bottom" constant="9" id="1EK-W8-5lt"/>
+                <constraint firstItem="AYD-N1-PGd" firstAttribute="height" secondItem="mpt-po-dYr" secondAttribute="height" id="2da-1b-9vr"/>
+                <constraint firstItem="mpt-po-dYr" firstAttribute="leading" secondItem="sYn-8T-UgM" secondAttribute="trailing" constant="28" id="2zb-Da-tao"/>
+                <constraint firstItem="Jlc-hN-RSJ" firstAttribute="leading" secondItem="AYD-N1-PGd" secondAttribute="trailing" constant="28" id="4TR-VV-hiH"/>
+                <constraint firstItem="AYD-N1-PGd" firstAttribute="height" secondItem="sYn-8T-UgM" secondAttribute="height" id="EVx-4r-ftC"/>
+                <constraint firstItem="AYD-N1-PGd" firstAttribute="leading" secondItem="5Ku-RU-3nX" secondAttribute="trailing" constant="25" id="GyJ-zE-Y1K"/>
+                <constraint firstItem="AYD-N1-PGd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="IVh-5A-D8h"/>
+                <constraint firstAttribute="bottom" secondItem="Jlc-hN-RSJ" secondAttribute="bottom" constant="9" id="K5B-aQ-qlM"/>
+                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Jlc-hN-RSJ" secondAttribute="trailing" constant="27" id="Mxb-PF-zNU"/>
+                <constraint firstAttribute="bottom" secondItem="AYD-N1-PGd" secondAttribute="bottom" constant="9" id="Rbg-WE-BYI"/>
+                <constraint firstItem="5Ku-RU-3nX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="aM3-OE-aeZ"/>
+                <constraint firstAttribute="bottom" secondItem="mpt-po-dYr" secondAttribute="bottom" constant="9" id="cn4-e6-wbD"/>
+                <constraint firstItem="sYn-8T-UgM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="fEd-AD-rPC"/>
+                <constraint firstItem="sYn-8T-UgM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="fhQ-W4-QQZ"/>
+                <constraint firstItem="sYn-8T-UgM" firstAttribute="leading" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="27" id="jvh-fp-DIU"/>
+                <constraint firstItem="AYD-N1-PGd" firstAttribute="height" secondItem="Jlc-hN-RSJ" secondAttribute="height" id="mGD-8s-rlA"/>
+                <constraint firstItem="Jlc-hN-RSJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="qsS-mZ-oUq"/>
+                <constraint firstItem="5Ku-RU-3nX" firstAttribute="leading" secondItem="mpt-po-dYr" secondAttribute="trailing" constant="28" id="sfq-TN-yTp"/>
+                <constraint firstAttribute="bottom" secondItem="5Ku-RU-3nX" secondAttribute="bottom" constant="9" id="sry-Zv-4CT"/>
+                <constraint firstItem="AYD-N1-PGd" firstAttribute="height" secondItem="5Ku-RU-3nX" secondAttribute="height" id="szM-FC-hd9"/>
+                <constraint firstItem="mpt-po-dYr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="vmb-0G-URZ"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jlc-hN-RSJ" secondAttribute="trailing" constant="15" id="xvN-oI-GQf"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="commentBtn" destination="sYn-8T-UgM" id="XDW-gn-MWh"/>
+            </connections>
+            <point key="canvasLocation" x="191.5" y="504"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_collect@3x.png" width="98" height="98"/>
+        <image name="icon_comment@3x.png" width="98" height="98"/>
+        <image name="icon_comment_ pen.png" width="20" height="19"/>
+        <image name="icon_more@3x.png" width="98" height="98"/>
+        <image name="icon_share@3x.png" width="98" height="98"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
