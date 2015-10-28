@@ -1,25 +1,147 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="DBMainController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="202.5" y="71.5"/>
+        </scene>
+        <!--Search Controller-->
+        <scene sceneID="TWa-c1-xpV">
+            <objects>
+                <viewController storyboardIdentifier="DBSearchController" id="Abi-Pf-DaG" customClass="DBSearchController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f15-QG-ecW"/>
+                        <viewControllerLayoutGuide type="bottom" id="x3v-8H-zzd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zi6-GO-zHz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gv4-dr-i8l">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="RWh-1Q-z8R"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Abi-Pf-DaG" id="6Yw-ZN-azX"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UBo-DQ-SoV">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Abi-Pf-DaG" id="pM0-Yu-JGX"/>
+                                    <outlet property="delegate" destination="Abi-Pf-DaG" id="R1c-nd-LG7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gv4-dr-i8l" secondAttribute="trailing" id="62e-ao-RLu"/>
+                            <constraint firstItem="x3v-8H-zzd" firstAttribute="top" secondItem="UBo-DQ-SoV" secondAttribute="bottom" id="CcK-Wa-WMv"/>
+                            <constraint firstItem="gv4-dr-i8l" firstAttribute="top" secondItem="f15-QG-ecW" secondAttribute="bottom" id="Jtw-wF-wtZ"/>
+                            <constraint firstItem="gv4-dr-i8l" firstAttribute="leading" secondItem="zi6-GO-zHz" secondAttribute="leading" id="To6-Df-HGo"/>
+                            <constraint firstItem="UBo-DQ-SoV" firstAttribute="top" secondItem="gv4-dr-i8l" secondAttribute="bottom" id="dc1-qf-Nlr"/>
+                            <constraint firstAttribute="trailing" secondItem="UBo-DQ-SoV" secondAttribute="trailing" id="yKF-Kw-syM"/>
+                            <constraint firstItem="UBo-DQ-SoV" firstAttribute="leading" secondItem="zi6-GO-zHz" secondAttribute="leading" id="zxL-8r-wkp"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="_searchBar" destination="gv4-dr-i8l" id="P9Y-De-o9c"/>
+                        <outlet property="_tableView" destination="UBo-DQ-SoV" id="uDH-jT-WRp"/>
+                        <outlet property="searchDisplayController" destination="pyO-nB-1r0" id="8tl-MA-UP6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cy8-gE-GaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="pyO-nB-1r0">
+                    <connections>
+                        <outlet property="delegate" destination="Abi-Pf-DaG" id="KX6-70-niM"/>
+                        <outlet property="searchBar" destination="gv4-dr-i8l" id="DFx-Ft-99g"/>
+                        <outlet property="searchContentsController" destination="Abi-Pf-DaG" id="oxw-dg-ciq"/>
+                        <outlet property="searchResultsDataSource" destination="Abi-Pf-DaG" id="wEG-m8-6Y7"/>
+                        <outlet property="searchResultsDelegate" destination="Abi-Pf-DaG" id="JWz-ge-J2b"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="589.5" y="71.5"/>
+        </scene>
+        <!--微信登录-->
+        <scene sceneID="fL1-fm-cpu">
+            <objects>
+                <viewController id="Z8F-4V-BY2" userLabel="微信登录" customClass="WXController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JrH-ts-f0K"/>
+                        <viewControllerLayoutGuide type="bottom" id="YjU-Hh-JJO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rUb-hK-Idp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Br-FZ-h7d">
+                                <rect key="frame" x="149" y="301" width="77" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="微信登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOD-0P-odU">
+                                <rect key="frame" x="149" y="301" width="77" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="微信登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pum-op-IRN">
+                                <rect key="frame" x="149" y="301" width="77" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="微信登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJr-Rg-PgM">
+                                <rect key="frame" x="5" y="30" width="27" height="27"/>
+                                <state key="normal" backgroundImage="back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52156862749999999" green="0.75294117650000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUu-vI-7Hn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994.5" y="71.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="27" height="27"/>
+    </resources>
 </document>

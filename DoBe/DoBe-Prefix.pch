@@ -1,0 +1,42 @@
+//
+//  DoBe-Prefix.pch
+//  DoBe
+//
+//  Created by liuxuan on 15/6/2.
+//  Copyright (c) 2015年 liuxuan. All rights reserved.
+//
+
+#ifndef DoBe_DoBe_Prefix_pch
+#define DoBe_DoBe_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "DefaultDefine.h"
+#import "DBType.h"
+#import "YCCategory.h"
+#import "QJTools.h"
+#import "YCTools.h"
+#import "UIViewController+YCCommon.h"
+#import "DBHTTPDefine.h"
+#import "QJEnvironment.h"
+#import "DBDefine.h"
+#import "DBUserModel.h"
+#import "DBLoginModel.h"
+#import "QJNetManger.h"
+#import "AppDelegate.h"
+
+#endif
+
+#endif
